@@ -6,7 +6,7 @@
             <div class="row">
                <div class="col-sm-12">
                   <div class="selector-wrapper main-product-select">
-                      {% include 'prod-buy-selector' %}
+                      {% include 'zipcode-selector' %}
                   </div>
                </div>
             </div>
