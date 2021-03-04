@@ -625,8 +625,9 @@
   <option value="9982" data-navn="Ålbæk" data-pris="1000 DKK">9982</option>
   <option value="9990" data-navn="Skagen" data-pris="1000 DKK">9990</option>
 </select>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+{{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js' | script_tag }}
+{{ 'jquery.cookie.js' | asset_url | script_tag }}
 <script type="text/javascript">
   function matchStart(params, data) {
     params.term = params.term || '';
@@ -640,12 +641,29 @@
       return matchStart(params, data);
     },
   });
-  $('.prodbuy-selector').on('change', function() {
-    if ($(this).val() != ''){
-      $('.post-selected').text($(this).find(':selected').data('navn'));
-      $('#SingleOptionSelector-0').val($(this).find(':selected').data('pris')).hide();
-      $('.prod_buy_selector .select2').slideUp();
-      $('.prod_buy_container').slideDown();
+  $(document).ready(function() {
+    $(document).on('click', '.zip-change',function(event) {
+      event.preventDefault();
+      $('.post-selected').html($.cookie('navn'));
+      $('.prodbuy-selector').val($.cookie('zip'));
+      $('.prod_buy_container').slideUp();
+      $('.prod_buy_selector .select2').slideDown();
+    });
+    if ($.cookie('navn') != ''){
+      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
+      $('.prodbuy-selector').val($.cookie('zip'));
+      $('#SingleOptionSelector-0').val($.cookie('pris')).hide();
+      $('.prod_buy_selector .select2').hide();
+      $('.prod_buy_container').show();
     }
+  });
+  $('.prodbuy-selector').on('change', function() {
+    $.cookie('zip', $(this).find(':selected').val(), { expires : 1 });
+    $.cookie('navn', $(this).find(':selected').data('navn'), { expires : 1 });
+    $.cookie('pris', $(this).find(':selected').data('pris'), { expires : 1 });
+    $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
+    $('#SingleOptionSelector-0').val($.cookie('pris')).hide();
+    $('.prod_buy_selector .select2').slideUp();
+    $('.prod_buy_container').slideDown();
   });
 </script>
