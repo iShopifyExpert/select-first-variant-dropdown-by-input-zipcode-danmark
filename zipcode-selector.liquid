@@ -631,24 +631,38 @@
 {{ 'jquery.cookie.js' | asset_url | script_tag }}
 <script type="text/javascript">
   function matchStart(params, data) {
-    params.term = params.term || '';
-    if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+    //params.term = params.term || '';
+    //if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+    //  return data;
+    //}
+    //return false;
+    if ($.trim(params.term) === '') {
       return data;
     }
-    return false;
+    if (typeof data.text === 'undefined') {
+      return null;
+    }
+    var words = params.term.toUpperCase().split(' ');
+    for (var i = 0; i < words.length; i++) {
+      if (data.text.toUpperCase().indexOf(words[i]) < 0) {
+        return null;
+      }
+    }
+    return data;
   }
   $('.prodbuy-selector').select2({
     //placeholder: "Select a state",
     tags: true,
+    minimumInputLength: 3,
     matcher: function(params, data) {
-    return matchStart(params, data);
-  },
+      return matchStart(params, data);
+    },
   });
   $(document).ready(function() {
     $(document).on('click', '.zip-change',function(event) {
       event.preventDefault();
       $('.post-selected').html($.cookie('navn'));
-      $('.prodbuy-selector').val($.cookie('zip')).trigger('click');
+      $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
       $('.prod_buy_container').slideUp();
       $('.prod_buy_selector .select2').slideDown();
     });
@@ -656,8 +670,8 @@
       $('.prod_buy_container').hide();
     } else {
       $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
-      $('.prodbuy-selector').val($.cookie('zip')).trigger('click');
-      $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('click').hide();
+      $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
+      $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('change').hide();
       $('.prod_buy_selector .select2').hide();
       $('.prod_buy_container').show();
     }
@@ -676,7 +690,7 @@
       $.cookie('navn', $(this).find(':selected').data('navn'), { expires : 1 });
       $.cookie('pris', $(this).find(':selected').data('pris'), { expires : 1 });
       $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
-      $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('click').hide();
+      $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('change').hide();
       $('.prod_buy_selector .select2').slideUp();
       $('.prod_buy_container').slideDown();
     }
