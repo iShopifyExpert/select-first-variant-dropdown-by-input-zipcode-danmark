@@ -652,7 +652,9 @@
       $('.prod_buy_container').slideUp();
       $('.prod_buy_selector .select2').slideDown();
     });
-    if ($.cookie('navn') != ''){
+    if ($.cookie('navn') == ''){
+      $('.prod_buy_container').hide();
+    } else {
       $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
       $('.prodbuy-selector').val($.cookie('zip')).trigger('click');
       $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('click').hide();
