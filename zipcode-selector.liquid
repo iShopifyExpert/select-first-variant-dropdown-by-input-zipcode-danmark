@@ -1,7 +1,7 @@
 <p class="zip-error" style="display:none;">Skriv til <a href="mailto:kontakt@grusshoppen.dk">kontakt@grusshoppen.dk</a>. Vi leverer som udgangspunkt ikke til dette postnr., men vi vil forsøge at finde en løsning til dig.</p>
 <label for="prodbuy-selector">Postnummer: <span class="post-selected"></span></label>
 <select class="prodbuy-selector" id="prodbuy-selector">
-  <option value="" data-navn="Frederiksberg" data-pris="1000 DKK" disabled selected>Select Postnummer</option>
+  <option value="" data-navn="Frederiksberg" data-pris="1000 DKK" disabled selected>Vælg dit postnummer</option>
   <option value="2000" data-navn="Frederiksberg" data-pris="1000 DKK">2000 Frederiksberg</option>
   <option value="2100" data-navn="København Ø" data-pris="1000 DKK">2100 København Ø</option>
   <option value="2150" data-navn="Nordhavn" data-pris="1000 DKK">2150 Nordhavn</option>
@@ -628,6 +628,7 @@
 </select>
 {{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' | stylesheet_tag }}
 {{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js' | script_tag }}
+{{ 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/da.js' | script_tag }}
 {{ 'jquery.cookie.js' | asset_url | script_tag }}
 <script type="text/javascript">
   function matchStart(params, data) {
@@ -652,6 +653,7 @@
   }
   $('.prodbuy-selector').select2({
     //placeholder: "Select a state",
+    language: 'da',
     tags: true,
     minimumInputLength: 3,
     matcher: function(params, data) {
@@ -669,7 +671,7 @@
     if ($.cookie('navn') == ''){
       $('.prod_buy_container').hide();
     } else {
-      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
+      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Ændrer postnummer)</a>');
       $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
       $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('change').hide();
       $('.prod_buy_selector .select2').hide();
@@ -689,7 +691,7 @@
       $.cookie('zip', $(this).find(':selected').val(), { expires : 1 });
       $.cookie('navn', $(this).find(':selected').data('navn'), { expires : 1 });
       $.cookie('pris', $(this).find(':selected').data('pris'), { expires : 1 });
-      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Lave om)</a>');
+      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Ændrer postnummer)</a>');
       $('#SingleOptionSelector-0').val($.cookie('pris')).trigger('change').hide();
       $('.prod_buy_selector .select2').slideUp();
       $('.prod_buy_container').slideDown();
