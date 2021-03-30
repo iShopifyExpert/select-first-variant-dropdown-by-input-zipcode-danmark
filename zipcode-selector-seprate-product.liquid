@@ -1,0 +1,708 @@
+<p class="zip-error" style="display:none;">Skriv til <a href="mailto:kontakt@grusshoppen.dk">kontakt@grusshoppen.dk</a>. Vi leverer som udgangspunkt ikke til dette postnr., men vi vil forsøge at finde en løsning til dig.</p>
+<label for="prodbuy-selector">Postnummer: <span class="post-selected"></span></label>
+<select class="prodbuy-selector" id="prodbuy-selector">
+  <option value="" data-navn="Frederiksberg" data-pris="1000 DKK" disabled selected>Vælg dit postnummer</option>
+  <option value="2000" data-navn="Frederiksberg" data-pris="1000 DKK">2000 Frederiksberg</option>
+  <option value="2100" data-navn="København Ø" data-pris="1000 DKK">2100 København Ø</option>
+  <option value="2150" data-navn="Nordhavn" data-pris="1000 DKK">2150 Nordhavn</option>
+  <option value="2200" data-navn="København N" data-pris="1000 DKK">2200 København N</option>
+  <option value="2300" data-navn="København S" data-pris="1000 DKK">2300 København S</option>
+  <option value="2400" data-navn="København NV" data-pris="1000 DKK">2400 København NV</option>
+  <option value="2450" data-navn="København SV" data-pris="1000 DKK">2450 København SV</option>
+  <option value="2500" data-navn="Valby" data-pris="1000 DKK">2500 Valby</option>
+  <option value="2600" data-navn="Glostrup" data-pris="1000 DKK">2600 Glostrup</option>
+  <option value="2605" data-navn="Brøndby" data-pris="1000 DKK">2605 Brøndby</option>
+  <option value="2610" data-navn="Rødovre" data-pris="1000 DKK">2610 Rødovre</option>
+  <option value="2620" data-navn="Albertslund" data-pris="1000 DKK">2620 Albertslund</option>
+  <option value="2625" data-navn="Vallensbæk" data-pris="1000 DKK">2625 Vallensbæk</option>
+  <option value="2630" data-navn="Taastrup" data-pris="1000 DKK">2630 Taastrup</option>
+  <option value="2635" data-navn="Ishøj" data-pris="1000 DKK">2635 Ishøj</option>
+  <option value="2640" data-navn="Hedehusene" data-pris="1000 DKK">2640 Hedehusene</option>
+  <option value="2650" data-navn="Hvidovre" data-pris="1000 DKK">2650 Hvidovre</option>
+  <option value="2660" data-navn="Brøndby Strand" data-pris="1000 DKK">2660 Brøndby Strand</option>
+  <option value="2665" data-navn="Vallensbæk Strand" data-pris="1000 DKK">2665 Vallensbæk Strand</option>
+  <option value="2670" data-navn="Greve" data-pris="1000 DKK">2670 Greve</option>
+  <option value="2680" data-navn="Solrød Strand" data-pris="1000 DKK">2680 Solrød Strand</option>
+  <option value="2690" data-navn="Karlslunde" data-pris="1000 DKK">2690 Karlslunde</option>
+  <option value="2700" data-navn="Brønshøj" data-pris="1000 DKK">2700 Brønshøj</option>
+  <option value="2720" data-navn="Vanløse" data-pris="1000 DKK">2720 Vanløse</option>
+  <option value="2730" data-navn="Herlev" data-pris="1000 DKK">2730 Herlev</option>
+  <option value="2740" data-navn="Skovlunde" data-pris="1000 DKK">2740 Skovlunde</option>
+  <option value="2750" data-navn="Ballerup" data-pris="1000 DKK">2750 Ballerup</option>
+  <option value="2760" data-navn="Måløv" data-pris="1000 DKK">2760 Måløv</option>
+  <option value="2765" data-navn="Smørum" data-pris="1000 DKK">2765 Smørum</option>
+  <option value="2770" data-navn="Kastrup" data-pris="1000 DKK">2770 Kastrup</option>
+  <option value="2791" data-navn="Dragør" data-pris="1000 DKK">2791 Dragør</option>
+  <option value="2800" data-navn="Kongens Lyngby" data-pris="1000 DKK">2800 Kongens Lyngby</option>
+  <option value="2820" data-navn="Gentofte" data-pris="1000 DKK">2820 Gentofte</option>
+  <option value="2830" data-navn="Virum" data-pris="1000 DKK">2830 Virum</option>
+  <option value="2840" data-navn="Holte" data-pris="1000 DKK">2840 Holte</option>
+  <option value="2850" data-navn="Nærum" data-pris="1000 DKK">2850 Nærum</option>
+  <option value="2860" data-navn="Søborg" data-pris="1000 DKK">2860 Søborg</option>
+  <option value="2870" data-navn="Dyssegård" data-pris="1000 DKK">2870 Dyssegård</option>
+  <option value="2880" data-navn="Bagsværd" data-pris="1000 DKK">2880 Bagsværd</option>
+  <option value="2900" data-navn="Hellerup" data-pris="1000 DKK">2900 Hellerup</option>
+  <option value="2920" data-navn="Charlottenlund" data-pris="1000 DKK">2920 Charlottenlund</option>
+  <option value="2930" data-navn="Klampenborg" data-pris="1000 DKK">2930 Klampenborg</option>
+  <option value="2942" data-navn="Skodsborg" data-pris="1000 DKK">2942 Skodsborg</option>
+  <option value="2950" data-navn="Vedbæk" data-pris="1000 DKK">2950 Vedbæk</option>
+  <option value="2960" data-navn="Rungsted Kyst" data-pris="1000 DKK">2960 Rungsted Kyst</option>
+  <option value="2970" data-navn="Hørsholm" data-pris="1000 DKK">2970 Hørsholm</option>
+  <option value="2980" data-navn="Kokkedal" data-pris="1000 DKK">2980 Kokkedal</option>
+  <option value="2990" data-navn="Nivå" data-pris="1000 DKK">2990 Nivå</option>
+  <option value="3000" data-navn="Helsingør" data-pris="1000 DKK">3000 Helsingør</option>
+  <option value="3050" data-navn="Humlebæk" data-pris="1000 DKK">3050 Humlebæk</option>
+  <option value="3060" data-navn="Espergærde" data-pris="1000 DKK">3060 Espergærde</option>
+  <option value="3070" data-navn="Snekkersten" data-pris="1000 DKK">3070 Snekkersten</option>
+  <option value="3080" data-navn="Tikøb" data-pris="1000 DKK">3080 Tikøb</option>
+  <option value="3100" data-navn="Hornbæk" data-pris="1000 DKK">3100 Hornbæk</option>
+  <option value="3120" data-navn="Dronningmølle" data-pris="1000 DKK">3120 Dronningmølle</option>
+  <option value="3140" data-navn="Ålsgårde" data-pris="1000 DKK">3140 Ålsgårde</option>
+  <option value="3150" data-navn="Hellebæk" data-pris="1000 DKK">3150 Hellebæk</option>
+  <option value="3200" data-navn="Helsinge" data-pris="1000 DKK">3200 Helsinge</option>
+  <option value="3210" data-navn="Vejby" data-pris="1000 DKK">3210 Vejby</option>
+  <option value="3220" data-navn="Tisvildeleje" data-pris="1000 DKK">3220 Tisvildeleje</option>
+  <option value="3230" data-navn="Græsted" data-pris="1000 DKK">3230 Græsted</option>
+  <option value="3250" data-navn="Gilleleje" data-pris="1000 DKK">3250 Gilleleje</option>
+  <option value="3300" data-navn="Frederiksværk" data-pris="1000 DKK">3300 Frederiksværk</option>
+  <option value="3310" data-navn="Ølsted" data-pris="1000 DKK">3310 Ølsted</option>
+  <option value="3320" data-navn="Skævinge" data-pris="1000 DKK">3320 Skævinge</option>
+  <option value="3330" data-navn="Gørløse" data-pris="1000 DKK">3330 Gørløse</option>
+  <option value="3360" data-navn="Liseleje" data-pris="1000 DKK">3360 Liseleje</option>
+  <option value="3370" data-navn="Melby" data-pris="1000 DKK">3370 Melby</option>
+  <option value="3390" data-navn="Hundested" data-pris="1000 DKK">3390 Hundested</option>
+  <option value="3400" data-navn="Hillerød" data-pris="1000 DKK">3400 Hillerød</option>
+  <option value="3450" data-navn="Allerød" data-pris="1000 DKK">3450 Allerød</option>
+  <option value="3460" data-navn="Birkerød" data-pris="1000 DKK">3460 Birkerød</option>
+  <option value="3480" data-navn="Fredensborg" data-pris="1000 DKK">3480 Fredensborg</option>
+  <option value="3490" data-navn="Kvistgård" data-pris="1000 DKK">3490 Kvistgård</option>
+  <option value="3500" data-navn="Værløse" data-pris="1000 DKK">3500 Værløse</option>
+  <option value="3520" data-navn="Farum" data-pris="1000 DKK">3520 Farum</option>
+  <option value="3540" data-navn="Lynge" data-pris="1000 DKK">3540 Lynge</option>
+  <option value="3550" data-navn="Slangerup" data-pris="1000 DKK">3550 Slangerup</option>
+  <option value="3600" data-navn="Frederikssund" data-pris="1000 DKK">3600 Frederikssund</option>
+  <option value="3630" data-navn="Jægerspris" data-pris="1000 DKK">3630 Jægerspris</option>
+  <option value="3650" data-navn="Ølstykke" data-pris="1000 DKK">3650 Ølstykke</option>
+  <option value="3660" data-navn="Stenløse" data-pris="1000 DKK">3660 Stenløse</option>
+  <option value="3670" data-navn="Veksø Sjælland" data-pris="1000 DKK">3670 Veksø Sjælland</option>
+  <option value="3700" data-navn="Rønne" data-pris="1000 DKK">3700 Rønne</option>
+  <option value="3720" data-navn="Aakirkeby" data-pris="1000 DKK">3720 Aakirkeby</option>
+  <option value="3730" data-navn="Nexø" data-pris="1000 DKK">3730 Nexø</option>
+  <option value="3740" data-navn="Svaneke" data-pris="1000 DKK">3740 Svaneke</option>
+  <option value="3751" data-navn="Østermarie" data-pris="1000 DKK">3751 Østermarie</option>
+  <option value="3770" data-navn="Allinge" data-pris="1000 DKK">3770 Allinge</option>
+  <option value="3782" data-navn="Klemensker" data-pris="1000 DKK">3782 Klemensker</option>
+  <option value="3790" data-navn="Hasle" data-pris="1000 DKK">3790 Hasle</option>
+  <option value="4000" data-navn="Roskilde" data-pris="1000 DKK">4000 Roskilde</option>
+  <option value="4030" data-navn="Tune" data-pris="1000 DKK">4030 Tune</option>
+  <option value="4040" data-navn="Jyllinge" data-pris="1000 DKK">4040 Jyllinge</option>
+  <option value="4050" data-navn="Skibby" data-pris="1000 DKK">4050 Skibby</option>
+  <option value="4060" data-navn="Kirke Såby" data-pris="1000 DKK">4060 Kirke Såby</option>
+  <option value="4070" data-navn="Kirke Hyllinge" data-pris="1000 DKK">4070 Kirke Hyllinge</option>
+  <option value="4100" data-navn="Ringsted" data-pris="1000 DKK">4100 Ringsted</option>
+  <option value="4129" data-navn="Ringsted" data-pris="1000 DKK">4129 Ringsted</option>
+  <option value="4130" data-navn="Viby Sjælland" data-pris="1000 DKK">4130 Viby Sjælland</option>
+  <option value="4140" data-navn="Borup" data-pris="1000 DKK">4140 Borup</option>
+  <option value="4160" data-navn="Herlufmagle" data-pris="1000 DKK">4160 Herlufmagle</option>
+  <option value="4171" data-navn="Glumsø" data-pris="1000 DKK">4171 Glumsø</option>
+  <option value="4173" data-navn="Fjenneslev" data-pris="1000 DKK">4173 Fjenneslev</option>
+  <option value="4174" data-navn="Jystrup Midtsj" data-pris="1000 DKK">4174 Jystrup Midtsj</option>
+  <option value="4190" data-navn="Munke Bjergby" data-pris="1000 DKK">4190 Munke Bjergby</option>
+  <option value="4200" data-navn="Slagelse" data-pris="1000 DKK">4200 Slagelse</option>
+  <option value="4220" data-navn="Korsør" data-pris="1000 DKK">4220 Korsør</option>
+  <option value="4230" data-navn="Skælskør" data-pris="1000 DKK">4230 Skælskør</option>
+  <option value="4241" data-navn="Vemmelev" data-pris="1000 DKK">4241 Vemmelev</option>
+  <option value="4242" data-navn="Boeslunde" data-pris="1000 DKK">4242 Boeslunde</option>
+  <option value="4243" data-navn="Rude" data-pris="1000 DKK">4243 Rude</option>
+  <option value="4244" data-navn="Agersø" data-pris="1000 DKK">4244 Agersø</option>
+  <option value="4245" data-navn="Omø" data-pris="1000 DKK">4245 Omø</option>
+  <option value="4250" data-navn="Fuglebjerg" data-pris="1000 DKK">4250 Fuglebjerg</option>
+  <option value="4261" data-navn="Dalmose" data-pris="1000 DKK">4261 Dalmose</option>
+  <option value="4262" data-navn="Sandved" data-pris="1000 DKK">4262 Sandved</option>
+  <option value="4270" data-navn="Høng" data-pris="1000 DKK">4270 Høng</option>
+  <option value="4281" data-navn="Gørlev" data-pris="1000 DKK">4281 Gørlev</option>
+  <option value="4291" data-navn="Ruds Vedby" data-pris="1000 DKK">4291 Ruds Vedby</option>
+  <option value="4293" data-navn="Dianalund" data-pris="1000 DKK">4293 Dianalund</option>
+  <option value="4295" data-navn="Stenlille" data-pris="1000 DKK">4295 Stenlille</option>
+  <option value="4296" data-navn="Nyrup" data-pris="1000 DKK">4296 Nyrup</option>
+  <option value="4300" data-navn="Holbæk" data-pris="1000 DKK">4300 Holbæk</option>
+  <option value="4305" data-navn="Orø" data-pris="1000 DKK">4305 Orø</option>
+  <option value="4320" data-navn="Lejre" data-pris="1000 DKK">4320 Lejre</option>
+  <option value="4330" data-navn="Hvalsø" data-pris="1000 DKK">4330 Hvalsø</option>
+  <option value="4340" data-navn="Tølløse" data-pris="1000 DKK">4340 Tølløse</option>
+  <option value="4350" data-navn="Ugerløse" data-pris="1000 DKK">4350 Ugerløse</option>
+  <option value="4360" data-navn="Kirke Eskilstrup" data-pris="1000 DKK">4360 Kirke Eskilstrup</option>
+  <option value="4370" data-navn="Store Merløse" data-pris="1000 DKK">4370 Store Merløse</option>
+  <option value="4390" data-navn="Vipperød" data-pris="1000 DKK">4390 Vipperød</option>
+  <option value="4400" data-navn="Kalundborg" data-pris="1000 DKK">4400 Kalundborg</option>
+  <option value="4420" data-navn="Regstrup" data-pris="1000 DKK">4420 Regstrup</option>
+  <option value="4440" data-navn="Mørkøv" data-pris="1000 DKK">4440 Mørkøv</option>
+  <option value="4450" data-navn="Jyderup" data-pris="1000 DKK">4450 Jyderup</option>
+  <option value="4460" data-navn="Snertinge" data-pris="1000 DKK">4460 Snertinge</option>
+  <option value="4470" data-navn="Svebølle" data-pris="1000 DKK">4470 Svebølle</option>
+  <option value="4480" data-navn="Store Fuglede" data-pris="1000 DKK">4480 Store Fuglede</option>
+  <option value="4490" data-navn="Jerslev Sjælland" data-pris="1000 DKK">4490 Jerslev Sjælland</option>
+  <option value="4500" data-navn="Nykøbing Sj" data-pris="1000 DKK">4500 Nykøbing Sj</option>
+  <option value="4520" data-navn="Svinninge" data-pris="1000 DKK">4520 Svinninge</option>
+  <option value="4532" data-navn="Gislinge" data-pris="1000 DKK">4532 Gislinge</option>
+  <option value="4534" data-navn="Hørve" data-pris="1000 DKK">4534 Hørve</option>
+  <option value="4540" data-navn="Fårevejle" data-pris="1000 DKK">4540 Fårevejle</option>
+  <option value="4550" data-navn="Asnæs" data-pris="1000 DKK">4550 Asnæs</option>
+  <option value="4560" data-navn="Vig" data-pris="1000 DKK">4560 Vig</option>
+  <option value="4571" data-navn="Grevinge" data-pris="1000 DKK">4571 Grevinge</option>
+  <option value="4572" data-navn="Nørre Asmindrup" data-pris="1000 DKK">4572 Nørre Asmindrup</option>
+  <option value="4573" data-navn="Højby" data-pris="1000 DKK">4573 Højby</option>
+  <option value="4581" data-navn="Rørvig" data-pris="1000 DKK">4581 Rørvig</option>
+  <option value="4583" data-navn="Sjællands Odde" data-pris="1000 DKK">4583 Sjællands Odde</option>
+  <option value="4591" data-navn="Føllenslev" data-pris="1000 DKK">4591 Føllenslev</option>
+  <option value="4592" data-navn="Sejerø" data-pris="1000 DKK">4592 Sejerø</option>
+  <option value="4593" data-navn="Eskebjerg" data-pris="1000 DKK">4593 Eskebjerg</option>
+  <option value="4600" data-navn="Køge" data-pris="1000 DKK">4600 Køge</option>
+  <option value="4621" data-navn="Gadstrup" data-pris="1000 DKK">4621 Gadstrup</option>
+  <option value="4622" data-navn="Havdrup" data-pris="1000 DKK">4622 Havdrup</option>
+  <option value="4623" data-navn="Lille Skensved" data-pris="1000 DKK">4623 Lille Skensved</option>
+  <option value="4632" data-navn="Bjæverskov" data-pris="1000 DKK">4632 Bjæverskov</option>
+  <option value="4640" data-navn="Faxe" data-pris="1000 DKK">4640 Faxe</option>
+  <option value="4652" data-navn="Hårlev" data-pris="1000 DKK">4652 Hårlev</option>
+  <option value="4653" data-navn="Karise" data-pris="1000 DKK">4653 Karise</option>
+  <option value="4654" data-navn="Faxe Ladeplads" data-pris="1000 DKK">4654 Faxe Ladeplads</option>
+  <option value="4660" data-navn="Store Heddinge" data-pris="1000 DKK">4660 Store Heddinge</option>
+  <option value="4671" data-navn="Strøby" data-pris="1000 DKK">4671 Strøby</option>
+  <option value="4672" data-navn="Klippinge" data-pris="1000 DKK">4672 Klippinge</option>
+  <option value="4673" data-navn="Rødvig Stevns" data-pris="1000 DKK">4673 Rødvig Stevns</option>
+  <option value="4681" data-navn="Herfølge" data-pris="1000 DKK">4681 Herfølge</option>
+  <option value="4682" data-navn="Tureby" data-pris="1000 DKK">4682 Tureby</option>
+  <option value="4683" data-navn="Rønnede" data-pris="1000 DKK">4683 Rønnede</option>
+  <option value="4684" data-navn="Holmegaard" data-pris="1000 DKK">4684 Holmegaard</option>
+  <option value="4690" data-navn="Haslev" data-pris="1000 DKK">4690 Haslev</option>
+  <option value="4700" data-navn="Næstved" data-pris="1000 DKK">4700 Næstved</option>
+  <option value="4720" data-navn="Præstø" data-pris="1000 DKK">4720 Præstø</option>
+  <option value="4733" data-navn="Tappernøje" data-pris="1000 DKK">4733 Tappernøje</option>
+  <option value="4735" data-navn="Mern" data-pris="1000 DKK">4735 Mern</option>
+  <option value="4736" data-navn="Karrebæksminde" data-pris="1000 DKK">4736 Karrebæksminde</option>
+  <option value="4750" data-navn="Lundby" data-pris="1000 DKK">4750 Lundby</option>
+  <option value="4760" data-navn="Vordingborg" data-pris="1000 DKK">4760 Vordingborg</option>
+  <option value="4771" data-navn="Kalvehave" data-pris="1000 DKK">4771 Kalvehave</option>
+  <option value="4772" data-navn="Langebæk" data-pris="1000 DKK">4772 Langebæk</option>
+  <option value="4773" data-navn="Stensved" data-pris="1000 DKK">4773 Stensved</option>
+  <option value="4780" data-navn="Stege" data-pris="1000 DKK">4780 Stege</option>
+  <option value="4791" data-navn="Borre" data-pris="1000 DKK">4791 Borre</option>
+  <option value="4792" data-navn="Askeby" data-pris="1000 DKK">4792 Askeby</option>
+  <option value="4793" data-navn="Bogø By" data-pris="1000 DKK">4793 Bogø By</option>
+  <option value="4800" data-navn="Nykøbing F" data-pris="1000 DKK">4800 Nykøbing F</option>
+  <option value="4840" data-navn="Nørre Alslev" data-pris="1000 DKK">4840 Nørre Alslev</option>
+  <option value="4850" data-navn="Stubbekøbing" data-pris="1000 DKK">4850 Stubbekøbing</option>
+  <option value="4862" data-navn="Guldborg" data-pris="1000 DKK">4862 Guldborg</option>
+  <option value="4863" data-navn="Eskilstrup" data-pris="1000 DKK">4863 Eskilstrup</option>
+  <option value="4871" data-navn="Horbelev" data-pris="1000 DKK">4871 Horbelev</option>
+  <option value="4872" data-navn="Idestrup" data-pris="1000 DKK">4872 Idestrup</option>
+  <option value="4873" data-navn="Væggerløse" data-pris="1000 DKK">4873 Væggerløse</option>
+  <option value="4874" data-navn="Gedser" data-pris="1000 DKK">4874 Gedser</option>
+  <option value="4880" data-navn="Nysted" data-pris="1000 DKK">4880 Nysted</option>
+  <option value="4891" data-navn="Toreby L" data-pris="1000 DKK">4891 Toreby L</option>
+  <option value="4892" data-navn="Kettinge" data-pris="1000 DKK">4892 Kettinge</option>
+  <option value="4894" data-navn="Øster Ulslev" data-pris="1000 DKK">4894 Øster Ulslev</option>
+  <option value="4895" data-navn="Errindlev" data-pris="1000 DKK">4895 Errindlev</option>
+  <option value="4900" data-navn="Nakskov" data-pris="1000 DKK">4900 Nakskov</option>
+  <option value="4912" data-navn="Harpelunde" data-pris="1000 DKK">4912 Harpelunde</option>
+  <option value="4913" data-navn="Horslunde" data-pris="1000 DKK">4913 Horslunde</option>
+  <option value="4920" data-navn="Søllested" data-pris="1000 DKK">4920 Søllested</option>
+  <option value="4930" data-navn="Maribo" data-pris="1000 DKK">4930 Maribo</option>
+  <option value="4941" data-navn="Bandholm" data-pris="1000 DKK">4941 Bandholm</option>
+  <option value="4942" data-navn="Askø og Lilleø" data-pris="1000 DKK">4942 Askø og Lilleø</option>
+  <option value="4943" data-navn="Torrig L" data-pris="1000 DKK">4943 Torrig L</option>
+  <option value="4944" data-navn="Fejø" data-pris="1000 DKK">4944 Fejø</option>
+  <option value="4945" data-navn="Femø" data-pris="1000 DKK">4945 Femø</option>
+  <option value="4951" data-navn="Nørreballe" data-pris="1000 DKK">4951 Nørreballe</option>
+  <option value="4952" data-navn="Stokkemarke" data-pris="1000 DKK">4952 Stokkemarke</option>
+  <option value="4953" data-navn="Vesterborg" data-pris="1000 DKK">4953 Vesterborg</option>
+  <option value="4960" data-navn="Holeby" data-pris="1000 DKK">4960 Holeby</option>
+  <option value="4970" data-navn="Rødby" data-pris="1000 DKK">4970 Rødby</option>
+  <option value="4983" data-navn="Dannemare" data-pris="1000 DKK">4983 Dannemare</option>
+  <option value="4990" data-navn="Sakskøbing" data-pris="1000 DKK">4990 Sakskøbing</option>
+  <option value="4992" data-navn="Midtsjælland USF P" data-pris="1000 DKK">4992 Midtsjælland USF P</option>
+  <option value="5000" data-navn="Odense C" data-pris="1000 DKK">5000 Odense C</option>
+  <option value="5029" data-navn="Odense C" data-pris="1000 DKK">5029 Odense C</option>
+  <option value="5100" data-navn="Odense C" data-pris="1000 DKK">5100 Odense C</option>
+  <option value="5200" data-navn="Odense V" data-pris="1000 DKK">5200 Odense V</option>
+  <option value="5210" data-navn="Odense NV" data-pris="1000 DKK">5210 Odense NV</option>
+  <option value="5220" data-navn="Odense SØ" data-pris="1000 DKK">5220 Odense SØ</option>
+  <option value="5230" data-navn="Odense M" data-pris="1000 DKK">5230 Odense M</option>
+  <option value="5240" data-navn="Odense NØ" data-pris="1000 DKK">5240 Odense NØ</option>
+  <option value="5250" data-navn="Odense SV" data-pris="1000 DKK">5250 Odense SV</option>
+  <option value="5260" data-navn="Odense S" data-pris="1000 DKK">5260 Odense S</option>
+  <option value="5270" data-navn="Odense N" data-pris="1000 DKK">5270 Odense N</option>
+  <option value="5290" data-navn="Marslev" data-pris="1000 DKK">5290 Marslev</option>
+  <option value="5300" data-navn="Kerteminde" data-pris="1000 DKK">5300 Kerteminde</option>
+  <option value="5320" data-navn="Agedrup" data-pris="1000 DKK">5320 Agedrup</option>
+  <option value="5330" data-navn="Munkebo" data-pris="1000 DKK">5330 Munkebo</option>
+  <option value="5350" data-navn="Rynkeby" data-pris="1000 DKK">5350 Rynkeby</option>
+  <option value="5370" data-navn="Mesinge" data-pris="1000 DKK">5370 Mesinge</option>
+  <option value="5380" data-navn="Dalby" data-pris="1000 DKK">5380 Dalby</option>
+  <option value="5390" data-navn="Martofte" data-pris="1000 DKK">5390 Martofte</option>
+  <option value="5400" data-navn="Bogense" data-pris="1000 DKK">5400 Bogense</option>
+  <option value="5450" data-navn="Otterup" data-pris="1000 DKK">5450 Otterup</option>
+  <option value="5462" data-navn="Morud" data-pris="1000 DKK">5462 Morud</option>
+  <option value="5463" data-navn="Harndrup" data-pris="1000 DKK">5463 Harndrup</option>
+  <option value="5464" data-navn="Brenderup Fyn" data-pris="1000 DKK">5464 Brenderup Fyn</option>
+  <option value="5466" data-navn="Asperup" data-pris="1000 DKK">5466 Asperup</option>
+  <option value="5471" data-navn="Søndersø" data-pris="1000 DKK">5471 Søndersø</option>
+  <option value="5474" data-navn="Veflinge" data-pris="1000 DKK">5474 Veflinge</option>
+  <option value="5485" data-navn="Skamby" data-pris="1000 DKK">5485 Skamby</option>
+  <option value="5491" data-navn="Blommenslyst" data-pris="1000 DKK">5491 Blommenslyst</option>
+  <option value="5492" data-navn="Vissenbjerg" data-pris="1000 DKK">5492 Vissenbjerg</option>
+  <option value="5500" data-navn="Middelfart" data-pris="1000 DKK">5500 Middelfart</option>
+  <option value="5540" data-navn="Ullerslev" data-pris="1000 DKK">5540 Ullerslev</option>
+  <option value="5550" data-navn="Langeskov" data-pris="1000 DKK">5550 Langeskov</option>
+  <option value="5560" data-navn="Aarup" data-pris="1000 DKK">5560 Aarup</option>
+  <option value="5580" data-navn="Nørre Aaby" data-pris="1000 DKK">5580 Nørre Aaby</option>
+  <option value="5591" data-navn="Gelsted" data-pris="1000 DKK">5591 Gelsted</option>
+  <option value="5592" data-navn="Ejby" data-pris="1000 DKK">5592 Ejby</option>
+  <option value="5600" data-navn="Faaborg" data-pris="1000 DKK">5600 Faaborg</option>
+  <option value="5601" data-navn="Lyø" data-pris="1000 DKK">5601 Lyø</option>
+  <option value="5602" data-navn="Avernakø" data-pris="1000 DKK">5602 Avernakø</option>
+  <option value="5603" data-navn="Bjørnø" data-pris="1000 DKK">5603 Bjørnø</option>
+  <option value="5610" data-navn="Assens" data-pris="1000 DKK">5610 Assens</option>
+  <option value="5620" data-navn="Glamsbjerg" data-pris="1000 DKK">5620 Glamsbjerg</option>
+  <option value="5631" data-navn="Ebberup" data-pris="1000 DKK">5631 Ebberup</option>
+  <option value="5642" data-navn="Millinge" data-pris="1000 DKK">5642 Millinge</option>
+  <option value="5672" data-navn="Broby" data-pris="1000 DKK">5672 Broby</option>
+  <option value="5683" data-navn="Haarby" data-pris="1000 DKK">5683 Haarby</option>
+  <option value="5690" data-navn="Tommerup" data-pris="1000 DKK">5690 Tommerup</option>
+  <option value="5700" data-navn="Svendborg" data-pris="1000 DKK">5700 Svendborg</option>
+  <option value="5750" data-navn="Ringe" data-pris="1000 DKK">5750 Ringe</option>
+  <option value="5762" data-navn="Vester Skerninge" data-pris="1000 DKK">5762 Vester Skerninge</option>
+  <option value="5771" data-navn="Stenstrup" data-pris="1000 DKK">5771 Stenstrup</option>
+  <option value="5772" data-navn="Kværndrup" data-pris="1000 DKK">5772 Kværndrup</option>
+  <option value="5792" data-navn="Årslev" data-pris="1000 DKK">5792 Årslev</option>
+  <option value="5800" data-navn="Nyborg" data-pris="1000 DKK">5800 Nyborg</option>
+  <option value="5853" data-navn="Ørbæk" data-pris="1000 DKK">5853 Ørbæk</option>
+  <option value="5854" data-navn="Gislev" data-pris="1000 DKK">5854 Gislev</option>
+  <option value="5856" data-navn="Ryslinge" data-pris="1000 DKK">5856 Ryslinge</option>
+  <option value="5863" data-navn="Ferritslev Fyn" data-pris="1000 DKK">5863 Ferritslev Fyn</option>
+  <option value="5871" data-navn="Frørup" data-pris="1000 DKK">5871 Frørup</option>
+  <option value="5874" data-navn="Hesselager" data-pris="1000 DKK">5874 Hesselager</option>
+  <option value="5881" data-navn="Skårup Fyn" data-pris="1000 DKK">5881 Skårup Fyn</option>
+  <option value="5882" data-navn="Vejstrup" data-pris="1000 DKK">5882 Vejstrup</option>
+  <option value="5883" data-navn="Oure" data-pris="1000 DKK">5883 Oure</option>
+  <option value="5884" data-navn="Gudme" data-pris="1000 DKK">5884 Gudme</option>
+  <option value="5892" data-navn="Gudbjerg Sydfyn" data-pris="1000 DKK">5892 Gudbjerg Sydfyn</option>
+  <option value="5900" data-navn="Rudkøbing" data-pris="1000 DKK">5900 Rudkøbing</option>
+  <option value="5932" data-navn="Humble" data-pris="1000 DKK">5932 Humble</option>
+  <option value="5935" data-navn="Bagenkop" data-pris="1000 DKK">5935 Bagenkop</option>
+  <option value="5943" data-navn="Strynø" data-pris="1000 DKK">5943 Strynø</option>
+  <option value="5953" data-navn="Tranekær" data-pris="1000 DKK">5953 Tranekær</option>
+  <option value="5960" data-navn="Marstal" data-pris="1000 DKK">5960 Marstal</option>
+  <option value="5965" data-navn="Birkholm" data-pris="1000 DKK">5965 Birkholm</option>
+  <option value="6000" data-navn="Kolding" data-pris="0 DKK">6000 Kolding</option>
+  <option value="6040" data-navn="Egtved" data-pris="0 DKK">6040 Egtved</option>
+  <option value="6051" data-navn="Almind" data-pris="0 DKK">6051 Almind</option>
+  <option value="6052" data-navn="Viuf" data-pris="0 DKK">6052 Viuf</option>
+  <option value="6064" data-navn="Jordrup" data-pris="0 DKK">6064 Jordrup</option>
+  <option value="6070" data-navn="Christiansfeld" data-pris="0 DKK">6070 Christiansfeld</option>
+  <option value="6091" data-navn="Bjert" data-pris="0 DKK">6091 Bjert</option>
+  <option value="6092" data-navn="Sønder Stenderup" data-pris="0 DKK">6092 Sønder Stenderup</option>
+  <option value="6093" data-navn="Sjølund" data-pris="0 DKK">6093 Sjølund</option>
+  <option value="6094" data-navn="Hejls" data-pris="0 DKK">6094 Hejls</option>
+  <option value="6100" data-navn="Haderslev" data-pris="0 DKK">6100 Haderslev</option>
+  <option value="6200" data-navn="Aabenraa" data-pris="0 DKK">6200 Aabenraa</option>
+  <option value="6210" data-navn="Barsø" data-pris="0 DKK">6210 Barsø</option>
+  <option value="6230" data-navn="Rødekro" data-pris="0 DKK">6230 Rødekro</option>
+  <option value="6240" data-navn="Løgumkloster" data-pris="0 DKK">6240 Løgumkloster</option>
+  <option value="6261" data-navn="Bredebro" data-pris="0 DKK">6261 Bredebro</option>
+  <option value="6270" data-navn="Tønder" data-pris="0 DKK">6270 Tønder</option>
+  <option value="6280" data-navn="Højer" data-pris="0 DKK">6280 Højer</option>
+  <option value="6300" data-navn="Gråsten" data-pris="0 DKK">6300 Gråsten</option>
+  <option value="6310" data-navn="Broager" data-pris="0 DKK">6310 Broager</option>
+  <option value="6320" data-navn="Egernsund" data-pris="0 DKK">6320 Egernsund</option>
+  <option value="6330" data-navn="Padborg" data-pris="0 DKK">6330 Padborg</option>
+  <option value="6340" data-navn="Kruså" data-pris="0 DKK">6340 Kruså</option>
+  <option value="6360" data-navn="Tinglev" data-pris="0 DKK">6360 Tinglev</option>
+  <option value="6372" data-navn="Bylderup-Bov" data-pris="0 DKK">6372 Bylderup-Bov</option>
+  <option value="6392" data-navn="Bolderslev" data-pris="0 DKK">6392 Bolderslev</option>
+  <option value="6400" data-navn="Sønderborg" data-pris="0 DKK">6400 Sønderborg</option>
+  <option value="6430" data-navn="Nordborg" data-pris="0 DKK">6430 Nordborg</option>
+  <option value="6440" data-navn="Augustenborg" data-pris="0 DKK">6440 Augustenborg</option>
+  <option value="6470" data-navn="Sydals" data-pris="0 DKK">6470 Sydals</option>
+  <option value="6500" data-navn="Vojens" data-pris="0 DKK">6500 Vojens</option>
+  <option value="6510" data-navn="Gram" data-pris="0 DKK">6510 Gram</option>
+  <option value="6520" data-navn="Toftlund" data-pris="0 DKK">6520 Toftlund</option>
+  <option value="6534" data-navn="Agerskov" data-pris="0 DKK">6534 Agerskov</option>
+  <option value="6535" data-navn="Branderup J" data-pris="0 DKK">6535 Branderup J</option>
+  <option value="6541" data-navn="Bevtoft" data-pris="0 DKK">6541 Bevtoft</option>
+  <option value="6560" data-navn="Sommersted" data-pris="0 DKK">6560 Sommersted</option>
+  <option value="6580" data-navn="Vamdrup" data-pris="0 DKK">6580 Vamdrup</option>
+  <option value="6600" data-navn="Vejen" data-pris="0 DKK">6600 Vejen</option>
+  <option value="6621" data-navn="Gesten" data-pris="0 DKK">6621 Gesten</option>
+  <option value="6622" data-navn="Bække" data-pris="0 DKK">6622 Bække</option>
+  <option value="6623" data-navn="Vorbasse" data-pris="0 DKK">6623 Vorbasse</option>
+  <option value="6630" data-navn="Rødding" data-pris="0 DKK">6630 Rødding</option>
+  <option value="6640" data-navn="Lunderskov" data-pris="0 DKK">6640 Lunderskov</option>
+  <option value="6650" data-navn="Brørup" data-pris="0 DKK">6650 Brørup</option>
+  <option value="6660" data-navn="Lintrup" data-pris="0 DKK">6660 Lintrup</option>
+  <option value="6670" data-navn="Holsted" data-pris="0 DKK">6670 Holsted</option>
+  <option value="6682" data-navn="Hovborg" data-pris="0 DKK">6682 Hovborg</option>
+  <option value="6683" data-navn="Føvling" data-pris="0 DKK">6683 Føvling</option>
+  <option value="6690" data-navn="Gørding" data-pris="0 DKK">6690 Gørding</option>
+  <option value="6700" data-navn="Esbjerg" data-pris="0 DKK">6700 Esbjerg</option>
+  <option value="6701" data-navn="Esbjerg" data-pris="0 DKK">6701 Esbjerg</option>
+  <option value="6705" data-navn="Esbjerg Ø" data-pris="0 DKK">6705 Esbjerg Ø</option>
+  <option value="6710" data-navn="Esbjerg V" data-pris="0 DKK">6710 Esbjerg V</option>
+  <option value="6715" data-navn="Esbjerg N" data-pris="0 DKK">6715 Esbjerg N</option>
+  <option value="6720" data-navn="Fanø" data-pris="1000 DKK">6720 Fanø</option>
+  <option value="6731" data-navn="Tjæreborg" data-pris="0 DKK">6731 Tjæreborg</option>
+  <option value="6740" data-navn="Bramming" data-pris="0 DKK">6740 Bramming</option>
+  <option value="6752" data-navn="Glejbjerg" data-pris="1000 DKK">6752 Glejbjerg</option>
+  <option value="6753" data-navn="Agerbæk" data-pris="1000 DKK">6753 Agerbæk</option>
+  <option value="6760" data-navn="Ribe" data-pris="0 DKK">6760 Ribe</option>
+  <option value="6771" data-navn="Gredstedbro" data-pris="0 DKK">6771 Gredstedbro</option>
+  <option value="6780" data-navn="Skærbæk" data-pris="0 DKK">6780 Skærbæk</option>
+  <option value="6792" data-navn="Rømø" data-pris="0 DKK">6792 Rømø</option>
+  <option value="6800" data-navn="Varde" data-pris="1000 DKK">6800 Varde</option>
+  <option value="6818" data-navn="Årre" data-pris="1000 DKK">6818 Årre</option>
+  <option value="6823" data-navn="Ansager" data-pris="1000 DKK">6823 Ansager</option>
+  <option value="6830" data-navn="Nørre Nebel" data-pris="1000 DKK">6830 Nørre Nebel</option>
+  <option value="6840" data-navn="Oksbøl" data-pris="1000 DKK">6840 Oksbøl</option>
+  <option value="6851" data-navn="Janderup Vestj" data-pris="1000 DKK">6851 Janderup Vestj</option>
+  <option value="6852" data-navn="Billum" data-pris="1000 DKK">6852 Billum</option>
+  <option value="6853" data-navn="Vejers Strand" data-pris="1000 DKK">6853 Vejers Strand</option>
+  <option value="6854" data-navn="Henne" data-pris="1000 DKK">6854 Henne</option>
+  <option value="6855" data-navn="Outrup" data-pris="1000 DKK">6855 Outrup</option>
+  <option value="6857" data-navn="Blåvand" data-pris="1000 DKK">6857 Blåvand</option>
+  <option value="6862" data-navn="Tistrup" data-pris="1000 DKK">6862 Tistrup</option>
+  <option value="6870" data-navn="Ølgod" data-pris="1000 DKK">6870 Ølgod</option>
+  <option value="6880" data-navn="Tarm" data-pris="1000 DKK">6880 Tarm</option>
+  <option value="6893" data-navn="Hemmet" data-pris="1000 DKK">6893 Hemmet</option>
+  <option value="6900" data-navn="Skjern" data-pris="1000 DKK">6900 Skjern</option>
+  <option value="6920" data-navn="Videbæk" data-pris="1000 DKK">6920 Videbæk</option>
+  <option value="6933" data-navn="Kibæk" data-pris="1000 DKK">6933 Kibæk</option>
+  <option value="6940" data-navn="Lem St" data-pris="1000 DKK">6940 Lem St</option>
+  <option value="6950" data-navn="Ringkøbing" data-pris="1000 DKK">6950 Ringkøbing</option>
+  <option value="6960" data-navn="Hvide Sande" data-pris="1000 DKK">6960 Hvide Sande</option>
+  <option value="6971" data-navn="Spjald" data-pris="1000 DKK">6971 Spjald</option>
+  <option value="6973" data-navn="Ørnhøj" data-pris="1000 DKK">6973 Ørnhøj</option>
+  <option value="6980" data-navn="Tim" data-pris="1000 DKK">6980 Tim</option>
+  <option value="6990" data-navn="Ulfborg" data-pris="1000 DKK">6990 Ulfborg</option>
+  <option value="7000" data-navn="Fredericia" data-pris="1000 DKK">7000 Fredericia</option>
+  <option value="7007" data-navn="Fredericia" data-pris="1000 DKK">7007 Fredericia</option>
+  <option value="7017" data-navn="Taulov Pakkecenter" data-pris="1000 DKK">7017 Taulov Pakkecenter</option>
+  <option value="7018" data-navn="Pakker TLP" data-pris="1000 DKK">7018 Pakker TLP</option>
+  <option value="7029" data-navn="Fredericia" data-pris="1000 DKK">7029 Fredericia</option>
+  <option value="7080" data-navn="Børkop" data-pris="1000 DKK">7080 Børkop</option>
+  <option value="7100" data-navn="Vejle" data-pris="1000 DKK">7100 Vejle</option>
+  <option value="7120" data-navn="Vejle Øst" data-pris="1000 DKK">7120 Vejle Øst</option>
+  <option value="7130" data-navn="Juelsminde" data-pris="1000 DKK">7130 Juelsminde</option>
+  <option value="7140" data-navn="Stouby" data-pris="1000 DKK">7140 Stouby</option>
+  <option value="7150" data-navn="Barrit" data-pris="1000 DKK">7150 Barrit</option>
+  <option value="7160" data-navn="Tørring" data-pris="1000 DKK">7160 Tørring</option>
+  <option value="7171" data-navn="Uldum" data-pris="1000 DKK">7171 Uldum</option>
+  <option value="7173" data-navn="Vonge" data-pris="1000 DKK">7173 Vonge</option>
+  <option value="7182" data-navn="Bredsten" data-pris="1000 DKK">7182 Bredsten</option>
+  <option value="7183" data-navn="Randbøl" data-pris="1000 DKK">7183 Randbøl</option>
+  <option value="7184" data-navn="Vandel" data-pris="1000 DKK">7184 Vandel</option>
+  <option value="7190" data-navn="Billund" data-pris="1000 DKK">7190 Billund</option>
+  <option value="7200" data-navn="Grindsted" data-pris="1000 DKK">7200 Grindsted</option>
+  <option value="7250" data-navn="Hejnsvig" data-pris="1000 DKK">7250 Hejnsvig</option>
+  <option value="7260" data-navn="Sønder Omme" data-pris="1000 DKK">7260 Sønder Omme</option>
+  <option value="7270" data-navn="Stakroge" data-pris="1000 DKK">7270 Stakroge</option>
+  <option value="7280" data-navn="Sønder Felding" data-pris="1000 DKK">7280 Sønder Felding</option>
+  <option value="7300" data-navn="Jelling" data-pris="1000 DKK">7300 Jelling</option>
+  <option value="7321" data-navn="Gadbjerg" data-pris="1000 DKK">7321 Gadbjerg</option>
+  <option value="7323" data-navn="Give" data-pris="1000 DKK">7323 Give</option>
+  <option value="7330" data-navn="Brande" data-pris="1000 DKK">7330 Brande</option>
+  <option value="7361" data-navn="Ejstrupholm" data-pris="1000 DKK">7361 Ejstrupholm</option>
+  <option value="7362" data-navn="Hampen" data-pris="1000 DKK">7362 Hampen</option>
+  <option value="7400" data-navn="Herning" data-pris="1000 DKK">7400 Herning</option>
+  <option value="7429" data-navn="Herning" data-pris="1000 DKK">7429 Herning</option>
+  <option value="7430" data-navn="Ikast" data-pris="1000 DKK">7430 Ikast</option>
+  <option value="7441" data-navn="Bording" data-pris="1000 DKK">7441 Bording</option>
+  <option value="7442" data-navn="Engesvang" data-pris="1000 DKK">7442 Engesvang</option>
+  <option value="7451" data-navn="Sunds" data-pris="1000 DKK">7451 Sunds</option>
+  <option value="7470" data-navn="Karup J" data-pris="1000 DKK">7470 Karup J</option>
+  <option value="7480" data-navn="Vildbjerg" data-pris="1000 DKK">7480 Vildbjerg</option>
+  <option value="7490" data-navn="Aulum" data-pris="1000 DKK">7490 Aulum</option>
+  <option value="7500" data-navn="Holstebro" data-pris="1000 DKK">7500 Holstebro</option>
+  <option value="7540" data-navn="Haderup" data-pris="1000 DKK">7540 Haderup</option>
+  <option value="7550" data-navn="Sørvad" data-pris="1000 DKK">7550 Sørvad</option>
+  <option value="7560" data-navn="Hjerm" data-pris="1000 DKK">7560 Hjerm</option>
+  <option value="7570" data-navn="Vemb" data-pris="1000 DKK">7570 Vemb</option>
+  <option value="7600" data-navn="Struer" data-pris="1000 DKK">7600 Struer</option>
+  <option value="7620" data-navn="Lemvig" data-pris="1000 DKK">7620 Lemvig</option>
+  <option value="7650" data-navn="Bøvlingbjerg" data-pris="1000 DKK">7650 Bøvlingbjerg</option>
+  <option value="7660" data-navn="Bækmarksbro" data-pris="1000 DKK">7660 Bækmarksbro</option>
+  <option value="7673" data-navn="Harboøre" data-pris="1000 DKK">7673 Harboøre</option>
+  <option value="7680" data-navn="Thyborøn" data-pris="1000 DKK">7680 Thyborøn</option>
+  <option value="7700" data-navn="Thisted" data-pris="1000 DKK">7700 Thisted</option>
+  <option value="7730" data-navn="Hanstholm" data-pris="1000 DKK">7730 Hanstholm</option>
+  <option value="7741" data-navn="Frøstrup" data-pris="1000 DKK">7741 Frøstrup</option>
+  <option value="7742" data-navn="Vesløs" data-pris="1000 DKK">7742 Vesløs</option>
+  <option value="7752" data-navn="Snedsted" data-pris="1000 DKK">7752 Snedsted</option>
+  <option value="7755" data-navn="Bedsted Thy" data-pris="1000 DKK">7755 Bedsted Thy</option>
+  <option value="7760" data-navn="Hurup Thy" data-pris="1000 DKK">7760 Hurup Thy</option>
+  <option value="7770" data-navn="Vestervig" data-pris="1000 DKK">7770 Vestervig</option>
+  <option value="7790" data-navn="Thyholm" data-pris="1000 DKK">7790 Thyholm</option>
+  <option value="7800" data-navn="Skive" data-pris="1000 DKK">7800 Skive</option>
+  <option value="7830" data-navn="Vinderup" data-pris="1000 DKK">7830 Vinderup</option>
+  <option value="7840" data-navn="Højslev" data-pris="1000 DKK">7840 Højslev</option>
+  <option value="7850" data-navn="Stoholm Jyll" data-pris="1000 DKK">7850 Stoholm Jyll</option>
+  <option value="7860" data-navn="Spøttrup" data-pris="1000 DKK">7860 Spøttrup</option>
+  <option value="7870" data-navn="Roslev" data-pris="1000 DKK">7870 Roslev</option>
+  <option value="7884" data-navn="Fur" data-pris="1000 DKK">7884 Fur</option>
+  <option value="7900" data-navn="Nykøbing M" data-pris="1000 DKK">7900 Nykøbing M</option>
+  <option value="7950" data-navn="Erslev" data-pris="1000 DKK">7950 Erslev</option>
+  <option value="7960" data-navn="Karby" data-pris="1000 DKK">7960 Karby</option>
+  <option value="7970" data-navn="Redsted M" data-pris="1000 DKK">7970 Redsted M</option>
+  <option value="7980" data-navn="Vils" data-pris="1000 DKK">7980 Vils</option>
+  <option value="7990" data-navn="Øster Assels" data-pris="1000 DKK">7990 Øster Assels</option>
+  <option value="7992" data-navn="Sydjylland/Fyn USF P" data-pris="1000 DKK">7992 Sydjylland/Fyn USF P</option>
+  <option value="7993" data-navn="Sydjylland/Fyn USF B" data-pris="1000 DKK">7993 Sydjylland/Fyn USF B</option>
+  <option value="7996" data-navn="Fakturaservice" data-pris="1000 DKK">7996 Fakturaservice</option>
+  <option value="7997" data-navn="Fakturascanning" data-pris="1000 DKK">7997 Fakturascanning</option>
+  <option value="7998" data-navn="Statsservice" data-pris="1000 DKK">7998 Statsservice</option>
+  <option value="7999" data-navn="Kommunepost" data-pris="1000 DKK">7999 Kommunepost</option>
+  <option value="8000" data-navn="Aarhus C" data-pris="1000 DKK">8000 Aarhus C</option>
+  <option value="8100" data-navn="Aarhus C" data-pris="1000 DKK">8100 Aarhus C</option>
+  <option value="8200" data-navn="Aarhus N" data-pris="1000 DKK">8200 Aarhus N</option>
+  <option value="8210" data-navn="Aarhus V" data-pris="1000 DKK">8210 Aarhus V</option>
+  <option value="8220" data-navn="Brabrand" data-pris="1000 DKK">8220 Brabrand</option>
+  <option value="8229" data-navn="Risskov Ø" data-pris="1000 DKK">8229 Risskov Ø</option>
+  <option value="8230" data-navn="Åbyhøj" data-pris="1000 DKK">8230 Åbyhøj</option>
+  <option value="8240" data-navn="Risskov" data-pris="1000 DKK">8240 Risskov</option>
+  <option value="8245" data-navn="Risskov Ø" data-pris="1000 DKK">8245 Risskov Ø</option>
+  <option value="8250" data-navn="Egå" data-pris="1000 DKK">8250 Egå</option>
+  <option value="8260" data-navn="Viby J" data-pris="1000 DKK">8260 Viby J</option>
+  <option value="8270" data-navn="Højbjerg" data-pris="1000 DKK">8270 Højbjerg</option>
+  <option value="8300" data-navn="Odder" data-pris="1000 DKK">8300 Odder</option>
+  <option value="8305" data-navn="Samsø" data-pris="1000 DKK">8305 Samsø</option>
+  <option value="8310" data-navn="Tranbjerg J" data-pris="1000 DKK">8310 Tranbjerg J</option>
+  <option value="8320" data-navn="Mårslet" data-pris="1000 DKK">8320 Mårslet</option>
+  <option value="8330" data-navn="Beder" data-pris="1000 DKK">8330 Beder</option>
+  <option value="8340" data-navn="Malling" data-pris="1000 DKK">8340 Malling</option>
+  <option value="8350" data-navn="Hundslund" data-pris="1000 DKK">8350 Hundslund</option>
+  <option value="8355" data-navn="Solbjerg" data-pris="1000 DKK">8355 Solbjerg</option>
+  <option value="8361" data-navn="Hasselager" data-pris="1000 DKK">8361 Hasselager</option>
+  <option value="8362" data-navn="Hørning" data-pris="1000 DKK">8362 Hørning</option>
+  <option value="8370" data-navn="Hadsten" data-pris="1000 DKK">8370 Hadsten</option>
+  <option value="8380" data-navn="Trige" data-pris="1000 DKK">8380 Trige</option>
+  <option value="8381" data-navn="Tilst" data-pris="1000 DKK">8381 Tilst</option>
+  <option value="8382" data-navn="Hinnerup" data-pris="1000 DKK">8382 Hinnerup</option>
+  <option value="8400" data-navn="Ebeltoft" data-pris="1000 DKK">8400 Ebeltoft</option>
+  <option value="8410" data-navn="Rønde" data-pris="1000 DKK">8410 Rønde</option>
+  <option value="8420" data-navn="Knebel" data-pris="1000 DKK">8420 Knebel</option>
+  <option value="8444" data-navn="Balle" data-pris="1000 DKK">8444 Balle</option>
+  <option value="8450" data-navn="Hammel" data-pris="1000 DKK">8450 Hammel</option>
+  <option value="8462" data-navn="Harlev J" data-pris="1000 DKK">8462 Harlev J</option>
+  <option value="8464" data-navn="Galten" data-pris="1000 DKK">8464 Galten</option>
+  <option value="8471" data-navn="Sabro" data-pris="1000 DKK">8471 Sabro</option>
+  <option value="8472" data-navn="Sporup" data-pris="1000 DKK">8472 Sporup</option>
+  <option value="8500" data-navn="Grenaa" data-pris="1000 DKK">8500 Grenaa</option>
+  <option value="8520" data-navn="Lystrup" data-pris="1000 DKK">8520 Lystrup</option>
+  <option value="8530" data-navn="Hjortshøj" data-pris="1000 DKK">8530 Hjortshøj</option>
+  <option value="8541" data-navn="Skødstrup" data-pris="1000 DKK">8541 Skødstrup</option>
+  <option value="8543" data-navn="Hornslet" data-pris="1000 DKK">8543 Hornslet</option>
+  <option value="8544" data-navn="Mørke" data-pris="1000 DKK">8544 Mørke</option>
+  <option value="8550" data-navn="Ryomgård" data-pris="1000 DKK">8550 Ryomgård</option>
+  <option value="8560" data-navn="Kolind" data-pris="1000 DKK">8560 Kolind</option>
+  <option value="8570" data-navn="Trustrup" data-pris="1000 DKK">8570 Trustrup</option>
+  <option value="8581" data-navn="Nimtofte" data-pris="1000 DKK">8581 Nimtofte</option>
+  <option value="8585" data-navn="Glesborg" data-pris="1000 DKK">8585 Glesborg</option>
+  <option value="8586" data-navn="Ørum Djurs" data-pris="1000 DKK">8586 Ørum Djurs</option>
+  <option value="8592" data-navn="Anholt" data-pris="1000 DKK">8592 Anholt</option>
+  <option value="8600" data-navn="Silkeborg" data-pris="1000 DKK">8600 Silkeborg</option>
+  <option value="8620" data-navn="Kjellerup" data-pris="1000 DKK">8620 Kjellerup</option>
+  <option value="8632" data-navn="Lemming" data-pris="1000 DKK">8632 Lemming</option>
+  <option value="8641" data-navn="Sorring" data-pris="1000 DKK">8641 Sorring</option>
+  <option value="8643" data-navn="Ans By" data-pris="1000 DKK">8643 Ans By</option>
+  <option value="8653" data-navn="Them" data-pris="1000 DKK">8653 Them</option>
+  <option value="8654" data-navn="Bryrup" data-pris="1000 DKK">8654 Bryrup</option>
+  <option value="8660" data-navn="Skanderborg" data-pris="1000 DKK">8660 Skanderborg</option>
+  <option value="8670" data-navn="Låsby" data-pris="1000 DKK">8670 Låsby</option>
+  <option value="8680" data-navn="Ry" data-pris="1000 DKK">8680 Ry</option>
+  <option value="8700" data-navn="Horsens" data-pris="1000 DKK">8700 Horsens</option>
+  <option value="8721" data-navn="Daugård" data-pris="1000 DKK">8721 Daugård</option>
+  <option value="8722" data-navn="Hedensted" data-pris="1000 DKK">8722 Hedensted</option>
+  <option value="8723" data-navn="Løsning" data-pris="1000 DKK">8723 Løsning</option>
+  <option value="8732" data-navn="Hovedgård" data-pris="1000 DKK">8732 Hovedgård</option>
+  <option value="8740" data-navn="Brædstrup" data-pris="1000 DKK">8740 Brædstrup</option>
+  <option value="8751" data-navn="Gedved" data-pris="1000 DKK">8751 Gedved</option>
+  <option value="8752" data-navn="Østbirk" data-pris="1000 DKK">8752 Østbirk</option>
+  <option value="8762" data-navn="Flemming" data-pris="1000 DKK">8762 Flemming</option>
+  <option value="8763" data-navn="Rask Mølle" data-pris="1000 DKK">8763 Rask Mølle</option>
+  <option value="8765" data-navn="Klovborg" data-pris="1000 DKK">8765 Klovborg</option>
+  <option value="8766" data-navn="Nørre Snede" data-pris="1000 DKK">8766 Nørre Snede</option>
+  <option value="8781" data-navn="Stenderup" data-pris="1000 DKK">8781 Stenderup</option>
+  <option value="8783" data-navn="Hornsyld" data-pris="1000 DKK">8783 Hornsyld</option>
+  <option value="8789" data-navn="Endelave" data-pris="1000 DKK">8789 Endelave</option>
+  <option value="8799" data-navn="Tunø" data-pris="1000 DKK">8799 Tunø</option>
+  <option value="8800" data-navn="Viborg" data-pris="1000 DKK">8800 Viborg</option>
+  <option value="8830" data-navn="Tjele" data-pris="1000 DKK">8830 Tjele</option>
+  <option value="8831" data-navn="Løgstrup" data-pris="1000 DKK">8831 Løgstrup</option>
+  <option value="8832" data-navn="Skals" data-pris="1000 DKK">8832 Skals</option>
+  <option value="8840" data-navn="Rødkærsbro" data-pris="1000 DKK">8840 Rødkærsbro</option>
+  <option value="8850" data-navn="Bjerringbro" data-pris="1000 DKK">8850 Bjerringbro</option>
+  <option value="8860" data-navn="Ulstrup" data-pris="1000 DKK">8860 Ulstrup</option>
+  <option value="8870" data-navn="Langå" data-pris="1000 DKK">8870 Langå</option>
+  <option value="8881" data-navn="Thorsø" data-pris="1000 DKK">8881 Thorsø</option>
+  <option value="8882" data-navn="Fårvang" data-pris="1000 DKK">8882 Fårvang</option>
+  <option value="8883" data-navn="Gjern" data-pris="1000 DKK">8883 Gjern</option>
+  <option value="8900" data-navn="Randers C" data-pris="1000 DKK">8900 Randers C</option>
+  <option value="8920" data-navn="Randers NV" data-pris="1000 DKK">8920 Randers NV</option>
+  <option value="8930" data-navn="Randers NØ" data-pris="1000 DKK">8930 Randers NØ</option>
+  <option value="8940" data-navn="Randers SV" data-pris="1000 DKK">8940 Randers SV</option>
+  <option value="8950" data-navn="Ørsted" data-pris="1000 DKK">8950 Ørsted</option>
+  <option value="8960" data-navn="Randers SØ" data-pris="1000 DKK">8960 Randers SØ</option>
+  <option value="8961" data-navn="Allingåbro" data-pris="1000 DKK">8961 Allingåbro</option>
+  <option value="8963" data-navn="Auning" data-pris="1000 DKK">8963 Auning</option>
+  <option value="8970" data-navn="Havndal" data-pris="1000 DKK">8970 Havndal</option>
+  <option value="8981" data-navn="Spentrup" data-pris="1000 DKK">8981 Spentrup</option>
+  <option value="8983" data-navn="Gjerlev J" data-pris="1000 DKK">8983 Gjerlev J</option>
+  <option value="8990" data-navn="Fårup" data-pris="1000 DKK">8990 Fårup</option>
+  <option value="9000" data-navn="Aalborg" data-pris="1000 DKK">9000 Aalborg</option>
+  <option value="9029" data-navn="Aalborg" data-pris="1000 DKK">9029 Aalborg</option>
+  <option value="9100" data-navn="Aalborg" data-pris="1000 DKK">9100 Aalborg</option>
+  <option value="9200" data-navn="Aalborg SV" data-pris="1000 DKK">9200 Aalborg SV</option>
+  <option value="9210" data-navn="Aalborg SØ" data-pris="1000 DKK">9210 Aalborg SØ</option>
+  <option value="9220" data-navn="Aalborg Øst" data-pris="1000 DKK">9220 Aalborg Øst</option>
+  <option value="9230" data-navn="Svenstrup J" data-pris="1000 DKK">9230 Svenstrup J</option>
+  <option value="9240" data-navn="Nibe" data-pris="1000 DKK">9240 Nibe</option>
+  <option value="9260" data-navn="Gistrup" data-pris="1000 DKK">9260 Gistrup</option>
+  <option value="9270" data-navn="Klarup" data-pris="1000 DKK">9270 Klarup</option>
+  <option value="9280" data-navn="Storvorde" data-pris="1000 DKK">9280 Storvorde</option>
+  <option value="9293" data-navn="Kongerslev" data-pris="1000 DKK">9293 Kongerslev</option>
+  <option value="9300" data-navn="Sæby" data-pris="1000 DKK">9300 Sæby</option>
+  <option value="9310" data-navn="Vodskov" data-pris="1000 DKK">9310 Vodskov</option>
+  <option value="9320" data-navn="Hjallerup" data-pris="1000 DKK">9320 Hjallerup</option>
+  <option value="9330" data-navn="Dronninglund" data-pris="1000 DKK">9330 Dronninglund</option>
+  <option value="9340" data-navn="Asaa" data-pris="1000 DKK">9340 Asaa</option>
+  <option value="9352" data-navn="Dybvad" data-pris="1000 DKK">9352 Dybvad</option>
+  <option value="9362" data-navn="Gandrup" data-pris="1000 DKK">9362 Gandrup</option>
+  <option value="9370" data-navn="Hals" data-pris="1000 DKK">9370 Hals</option>
+  <option value="9380" data-navn="Vestbjerg" data-pris="1000 DKK">9380 Vestbjerg</option>
+  <option value="9381" data-navn="Sulsted" data-pris="1000 DKK">9381 Sulsted</option>
+  <option value="9382" data-navn="Tylstrup" data-pris="1000 DKK">9382 Tylstrup</option>
+  <option value="9400" data-navn="Nørresundby" data-pris="1000 DKK">9400 Nørresundby</option>
+  <option value="9430" data-navn="Vadum" data-pris="1000 DKK">9430 Vadum</option>
+  <option value="9440" data-navn="Aabybro" data-pris="1000 DKK">9440 Aabybro</option>
+  <option value="9460" data-navn="Brovst" data-pris="1000 DKK">9460 Brovst</option>
+  <option value="9480" data-navn="Løkken" data-pris="1000 DKK">9480 Løkken</option>
+  <option value="9490" data-navn="Pandrup" data-pris="1000 DKK">9490 Pandrup</option>
+  <option value="9492" data-navn="Blokhus" data-pris="1000 DKK">9492 Blokhus</option>
+  <option value="9493" data-navn="Saltum" data-pris="1000 DKK">9493 Saltum</option>
+  <option value="9500" data-navn="Hobro" data-pris="1000 DKK">9500 Hobro</option>
+  <option value="9510" data-navn="Arden" data-pris="1000 DKK">9510 Arden</option>
+  <option value="9520" data-navn="Skørping" data-pris="1000 DKK">9520 Skørping</option>
+  <option value="9530" data-navn="Støvring" data-pris="1000 DKK">9530 Støvring</option>
+  <option value="9541" data-navn="Suldrup" data-pris="1000 DKK">9541 Suldrup</option>
+  <option value="9550" data-navn="Mariager" data-pris="1000 DKK">9550 Mariager</option>
+  <option value="9560" data-navn="Hadsund" data-pris="1000 DKK">9560 Hadsund</option>
+  <option value="9574" data-navn="Bælum" data-pris="1000 DKK">9574 Bælum</option>
+  <option value="9575" data-navn="Terndrup" data-pris="1000 DKK">9575 Terndrup</option>
+  <option value="9600" data-navn="Aars" data-pris="1000 DKK">9600 Aars</option>
+  <option value="9610" data-navn="Nørager" data-pris="1000 DKK">9610 Nørager</option>
+  <option value="9620" data-navn="Aalestrup" data-pris="1000 DKK">9620 Aalestrup</option>
+  <option value="9631" data-navn="Gedsted" data-pris="1000 DKK">9631 Gedsted</option>
+  <option value="9632" data-navn="Møldrup" data-pris="1000 DKK">9632 Møldrup</option>
+  <option value="9640" data-navn="Farsø" data-pris="1000 DKK">9640 Farsø</option>
+  <option value="9670" data-navn="Løgstør" data-pris="1000 DKK">9670 Løgstør</option>
+  <option value="9681" data-navn="Ranum" data-pris="1000 DKK">9681 Ranum</option>
+  <option value="9690" data-navn="Fjerritslev" data-pris="1000 DKK">9690 Fjerritslev</option>
+  <option value="9700" data-navn="Brønderslev" data-pris="1000 DKK">9700 Brønderslev</option>
+  <option value="9740" data-navn="Jerslev J" data-pris="1000 DKK">9740 Jerslev J</option>
+  <option value="9750" data-navn="Østervrå" data-pris="1000 DKK">9750 Østervrå</option>
+  <option value="9760" data-navn="Vrå" data-pris="1000 DKK">9760 Vrå</option>
+  <option value="9800" data-navn="Hjørring" data-pris="1000 DKK">9800 Hjørring</option>
+  <option value="9830" data-navn="Tårs" data-pris="1000 DKK">9830 Tårs</option>
+  <option value="9850" data-navn="Hirtshals" data-pris="1000 DKK">9850 Hirtshals</option>
+  <option value="9870" data-navn="Sindal" data-pris="1000 DKK">9870 Sindal</option>
+  <option value="9881" data-navn="Bindslev" data-pris="1000 DKK">9881 Bindslev</option>
+  <option value="9900" data-navn="Frederikshavn" data-pris="1000 DKK">9900 Frederikshavn</option>
+  <option value="9940" data-navn="Læsø" data-pris="1000 DKK">9940 Læsø</option>
+  <option value="9970" data-navn="Strandby" data-pris="1000 DKK">9970 Strandby</option>
+  <option value="9981" data-navn="Jerup" data-pris="1000 DKK">9981 Jerup</option>
+  <option value="9982" data-navn="Ålbæk" data-pris="1000 DKK">9982 Ålbæk</option>
+  <option value="9990" data-navn="Skagen" data-pris="1000 DKK">9990 Skagen</option>
+</select>
+{{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' | stylesheet_tag }}
+{{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js' | script_tag }}
+{%comment%}{{ 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/da.js' | script_tag }}{%endcomment%}
+{{ 'select2-da.js' | asset_url | script_tag }}
+{{ 'jquery.cookie.js' | asset_url | script_tag }}
+
+{% assign shippingcharges = all_products['shipping-charges'] %}
+<select name="id[]" class="shipping-charges form-control hidden" id="shipping-charges">
+  {% for variant in shippingcharges.variants %}
+  <option value="{{ variant.id }}" data-price="{{ variant.price | money_with_currency | remove: '.' | split: ',' | first }} DKK">{{ variant.title | escape }}</option>
+  {% endfor %}
+</select>
+<script type="text/javascript">
+  function matchStart(params, data) {
+    //params.term = params.term || '';
+    //if (data.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+    //  return data;
+    //}
+    //return false;
+    if ($.trim(params.term) === '') {
+      return data;
+    }
+    if (typeof data.text === 'undefined') {
+      return null;
+    }
+    var words = params.term.toUpperCase().split(' ');
+    for (var i = 0; i < words.length; i++) {
+      if (data.text.toUpperCase().indexOf(words[i]) < 0) {
+        return null;
+      }
+    }
+    return data;
+  }
+  $('.prodbuy-selector').select2({
+    //placeholder: "Select a state",
+    language: 'da',
+    tags: true,
+    minimumInputLength: 3,
+    matcher: function(params, data) {
+      return matchStart(params, data);
+    },
+  });
+  $(document).ready(function() {
+    $(document).on('click', '.zip-change',function(event) {
+      event.preventDefault();
+      $('.post-selected').html($.cookie('navn'));
+      $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
+      $('.prod_buy_container').slideUp();
+      $('.prod_buy_selector .select2').slideDown();
+    });
+    if ($.cookie('navn') == ''){
+      $('.prod_buy_container').hide();
+    } else {
+      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Ændrer postnummer)</a>');
+      $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
+      var selectedval = $("#shipping-charges option[data-price='" + $.cookie('pris') + "']").val();
+      $("#shipping-charges").val(selectedval);
+      console.log(selectedval);
+      $('.prod_buy_selector .select2').hide();
+      $('.prod_buy_container').show();
+    }
+  });
+  $(document).on('change', '.prodbuy-selector', function() {
+    var select2tag = $(this).find(':selected').data('select2-tag');
+    if (typeof select2tag !== typeof undefined && select2tag !== false) {
+      $.cookie('zip', '', { expires : 1 });
+      $.cookie('navn', '', { expires : 1 });
+      $.cookie('pris', '', { expires : 1 });
+      $('.zip-error').show();
+      $('.post-selected').html('');
+    } else {
+      $('.zip-error').hide();
+      $.cookie('zip', $(this).find(':selected').val(), { expires : 1 });
+      $.cookie('navn', $(this).find(':selected').data('navn'), { expires : 1 });
+      $.cookie('pris', $(this).find(':selected').data('pris'), { expires : 1 });
+      $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Ændrer postnummer)</a>');
+      var selectedvall = $("#shipping-charges option[data-price='" + $.cookie('pris') + "']").val();
+      $("#shipping-charges").val(selectedvall);
+      console.log(selectedvall);
+      $('.prod_buy_selector .select2').slideUp();
+      $('.prod_buy_container').slideDown();
+    }
+  });
+</script>
