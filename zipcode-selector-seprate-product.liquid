@@ -624,9 +624,7 @@
 </select>
 {{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css' | stylesheet_tag }}
 {{ 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js' | script_tag }}
-{%comment%}{{ 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/da.js' | script_tag }}{%endcomment%}
 {{ 'select2-da.js' | asset_url | script_tag }}
-{{ 'jquery.cookie.js' | asset_url | script_tag }}
 
 {% assign shippingcharges = all_products['shipping-charges'] %}
 <select name="id[]" class="shipping-charges form-control hidden" id="shipping-charges">
@@ -679,7 +677,9 @@
       $('.prodbuy-selector').val($.cookie('zip')).trigger('change');
       var selectedval = $("#shipping-charges option[data-price='" + $.cookie('pris') + "']").val();
       $("#shipping-charges").val(selectedval);
+      $("#shippingprice").text('+ '+$.cookie('pris'));
       console.log(selectedval);
+      $.cookie('shippingid', selectedval, { expires : 1, path: '/' });
       $('.prod_buy_selector .select2').hide();
       $('.prod_buy_container').show();
     }
@@ -690,6 +690,7 @@
       $.cookie('zip', '', { expires : 1 });
       $.cookie('navn', '', { expires : 1 });
       $.cookie('pris', '', { expires : 1 });
+      $.cookie('shippingid', '', { expires : 1 });
       $('.zip-error').show();
       $('.post-selected').html('');
     } else {
@@ -698,9 +699,11 @@
       $.cookie('navn', $(this).find(':selected').data('navn'), { expires : 1 });
       $.cookie('pris', $(this).find(':selected').data('pris'), { expires : 1 });
       $('.post-selected').html($.cookie('navn')+'<a href="#" class="zip-change">(Ændrer postnummer)</a>');
-      var selectedvall = $("#shipping-charges option[data-price='" + $.cookie('pris') + "']").val();
-      $("#shipping-charges").val(selectedvall);
-      console.log(selectedvall);
+      var selectedval = $("#shipping-charges option[data-price='" + $.cookie('pris') + "']").val();
+      $.cookie('shippingid', selectedval, { expires : 1, path: '/' });
+      $("#shipping-charges").val(selectedval);
+      $("#shippingprice").text('+ '+$.cookie('pris'));
+      console.log(selectedval);
       $('.prod_buy_selector .select2').slideUp();
       $('.prod_buy_container').slideDown();
     }
