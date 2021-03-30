@@ -1,0 +1,4 @@
+{{ 'jquery.cookie.js' | asset_url | script_tag }}
+{% if template == 'cart' %}
+   {% include 'cart-adjuster' %}
+{% endif %}
