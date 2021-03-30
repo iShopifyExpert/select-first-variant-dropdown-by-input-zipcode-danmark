@@ -1,0 +1,40 @@
+<input type="hidden" value="" id="shippingcharges">
+<script type="text/javascript">
+$(document).ready(function($) {
+  console.log($.cookie('shippingid'));
+  if (typeof Shopify === 'undefined') var Shopify = {};
+  $('#shippingcharges').val($.cookie('shippingid')).attr('value', $.cookie('shippingid'));
+  Shopify.cart = {{ cart | json }};
+  Shopify.toAdd = $('#shippingcharges').val();
+  var stotal = 0;
+  var ptotal = 0;
+  var surchargeInCart = false;
+  for (var i=0; i<Shopify.cart.items.length; i++) {
+    if (Shopify.cart.items[i].product_title === 'Shipping Charges') {
+      surchargeInCart = true;
+      stotal += Shopify.cart.items[i].quantity;
+    }
+    if (Shopify.cart.items[i].product_title.indexOf('Shipping Charges') === -1) {
+      ptotal += Shopify.cart.items[i].quantity;
+    }
+  }
+  if (surchargeInCart && stotal < ptotal) {
+    window.location.href = '/cart/change?id='+Shopify.toAdd+'&quantity='+ptotal;
+  }
+  if (surchargeInCart && stotal > ptotal) {
+    window.location.href = '/cart/change?id='+Shopify.toAdd+'&quantity='+ptotal;
+  }
+  if (!surchargeInCart && ptotal > 0) {
+    var params = {
+      type: 'POST',
+      url: '/cart/add.js',
+      data: 'quantity='+ptotal+'&id='+Shopify.toAdd,
+      dataType: 'json',
+      success: function(line_item) { 
+        window.location.href = '/cart';
+      }
+    };
+    $.ajax(params);
+  }
+});
+</script>
